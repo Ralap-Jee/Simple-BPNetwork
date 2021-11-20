@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at lay1_mod.v(21): object "MULT_LATENCY" differs only in case from object "mult_latency" in the same scope File: D:/IntelFPGA/BPNetwork/src/lay1_mod.v Line: 21
+Info (10281): Verilog HDL Declaration information at lay1_mod.v(22): object "ADD_LATENCY" differs only in case from object "add_latency" in the same scope File: D:/IntelFPGA/BPNetwork/src/lay1_mod.v Line: 22
+Info (10281): Verilog HDL Declaration information at lay2_mod.v(20): object "MULT_LATENCY" differs only in case from object "mult_latency" in the same scope File: D:/IntelFPGA/BPNetwork/src/lay2_mod.v Line: 20
+Info (10281): Verilog HDL Declaration information at lay2_mod.v(21): object "ADD_LATENCY" differs only in case from object "add_latency" in the same scope File: D:/IntelFPGA/BPNetwork/src/lay2_mod.v Line: 21

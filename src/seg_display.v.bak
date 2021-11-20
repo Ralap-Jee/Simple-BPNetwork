@@ -1,0 +1,20 @@
+// seg_dispaly
+module seg_display(
+
+	input				clk,
+	input				rst_n,
+	input[31:0]		result,
+	input				en,
+	
+	output[3:0]		led
+
+);
+
+
+
+
+
+
+
+
+endmodule

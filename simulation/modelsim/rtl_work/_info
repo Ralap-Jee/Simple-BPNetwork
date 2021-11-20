@@ -1,0 +1,760 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/IntelFPGA/BPNetwork/simulation/modelsim
+vADD
+Z1 !s110 1637381449
+!i10b 1
+!s100 fzf:Vd:PhH8e8Td:3`K0a3
+I3@:i^gDeR61QYM2E=WzYY3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1637379456
+Z4 8D:/IntelFPGA/BPNetwork/db/ADD.v
+Z5 FD:/IntelFPGA/BPNetwork/db/ADD.v
+L0 2615
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1637381449.000000
+Z8 !s107 D:/IntelFPGA/BPNetwork/db/ADD.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/db|D:/IntelFPGA/BPNetwork/db/ADD.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/db
+Z12 tCvgOpt 0
+n@a@d@d
+vADD_altbarrel_shift_aeb
+R1
+!i10b 1
+!s100 E@dh8onfKbnUIn_06c0k:0
+I4dj9A[PkMYEaHM=40K8OH0
+R2
+R0
+R3
+R4
+R5
+L0 115
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altbarrel_shift_aeb
+vADD_altbarrel_shift_ltd
+R1
+!i10b 1
+!s100 Xc9c4P]1QUAg_1`R=d[H`2
+IVz8CW:M;mknF2bORd0Ml]3
+R2
+R0
+R3
+R4
+R5
+L0 50
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altbarrel_shift_ltd
+vADD_altfp_add_sub_55j
+R1
+!i10b 1
+!s100 N]X@35QdNTJaZ<<55[Fdf1
+ICnGlWa=zaNFg=52fYG9nb3
+R2
+R0
+R3
+R4
+R5
+L0 709
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altfp_add_sub_55j
+vADD_altpriority_encoder_3e8
+R1
+!i10b 1
+!s100 6X?=EjeS^JLlRaWQjo>8j0
+IF`zahePcnUfi58XQI?8E10
+R2
+R0
+R3
+R4
+R5
+L0 165
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_3e8
+vADD_altpriority_encoder_3v7
+R1
+!i10b 1
+!s100 Oa0B`cP?SfljoJo`@H<1K1
+IdndK_oaW14clakVL@N`5E2
+R2
+R0
+R3
+R4
+R5
+L0 262
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_3v7
+vADD_altpriority_encoder_6e8
+R1
+!i10b 1
+!s100 4eK]D?ML^CJK^H7^0JgiL0
+Imah8e_2bV<R`QPM:nkdij2
+R2
+R0
+R3
+R4
+R5
+L0 184
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_6e8
+vADD_altpriority_encoder_6v7
+R1
+!i10b 1
+!s100 zS@A76SkAcPJ[4JloJmNH2
+IiJS9U:F^8:9RXzcAUiXW]0
+R2
+R0
+R3
+R4
+R5
+L0 278
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_6v7
+vADD_altpriority_encoder_be8
+R1
+!i10b 1
+!s100 `a`>B`HUaS?fImL<DQY=z0
+I5<HjMf:MQgAFIUD`>Q;?f0
+R2
+R0
+R3
+R4
+R5
+L0 217
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_be8
+vADD_altpriority_encoder_bv7
+R1
+!i10b 1
+!s100 N=zB]Wd5LiSjBL[4KW`7<3
+IT5X1fCJCYN8BRSSSGC<UW0
+R2
+R0
+R3
+R4
+R5
+L0 306
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_bv7
+vADD_altpriority_encoder_e48
+R1
+!i10b 1
+!s100 [jNY0[JHGPT:@VglhC70>0
+ISd?2E9j8zL]j`[A5YRKdh1
+R2
+R0
+R3
+R4
+R5
+L0 681
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_e48
+vADD_altpriority_encoder_f48
+R1
+!i10b 1
+!s100 Ddb5d4;::_>ZZQH=Y6jEH2
+IJJ9cKNLmNmWmYAC@VN@V@0
+R2
+R0
+R3
+R4
+R5
+L0 653
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_f48
+vADD_altpriority_encoder_fj8
+R1
+!i10b 1
+!s100 odV3jKQFYhU<KHmHa13gG1
+I6m>@_KAd4c03e1>mSI^cF0
+R2
+R0
+R3
+R4
+R5
+L0 532
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_fj8
+vADD_altpriority_encoder_n28
+R1
+!i10b 1
+!s100 Eze_6=KQ24fEVdnO6c6^b1
+Ioe=gnWViTiIcg^;P>6XGM0
+R2
+R0
+R3
+R4
+R5
+L0 581
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_n28
+vADD_altpriority_encoder_nh8
+R1
+!i10b 1
+!s100 >Pai@7^n[K=CTm_2fffO13
+ISiFgiN]m?_lZO`mW_9_Bb3
+R2
+R0
+R3
+R4
+R5
+L0 447
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_nh8
+vADD_altpriority_encoder_q28
+R1
+!i10b 1
+!s100 mlcA8B0zgjiiG:C:9GdJe3
+I28GFUMgGnYPk[lBUZ`4^12
+R2
+R0
+R3
+R4
+R5
+L0 597
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_q28
+vADD_altpriority_encoder_qb6
+R1
+!i10b 1
+!s100 iogKf>]00^FgU:IedJABh0
+IToA1dz:jFL]CfDmBFC@e?3
+R2
+R0
+R3
+R4
+R5
+L0 399
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_qb6
+vADD_altpriority_encoder_qh8
+R1
+!i10b 1
+!s100 IEalc8oLH?<9P]fO]SD>Q3
+INlbKAJ:g=f=`ibd[aI@Z<3
+R2
+R0
+R3
+R4
+R5
+L0 466
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_qh8
+vADD_altpriority_encoder_r08
+R1
+!i10b 1
+!s100 fIMakK5AA5nU3f?C?=G9Y1
+If1_lf2<JUhLgk7PDCgaAl1
+R2
+R0
+R3
+R4
+R5
+L0 334
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_r08
+vADD_altpriority_encoder_rf8
+R1
+!i10b 1
+!s100 __]QcL0[Meh<`3>OM=Nad3
+I8Ch:1]W^K62c?D>3?mZji0
+R2
+R0
+R3
+R4
+R5
+L0 366
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_rf8
+vADD_altpriority_encoder_v28
+R1
+!i10b 1
+!s100 6bWH^F4N6FcL1CT4SY[m02
+IehoANbI0>h6A_JQmeSI]d2
+R2
+R0
+R3
+R4
+R5
+L0 625
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_v28
+vADD_altpriority_encoder_vh8
+R1
+!i10b 1
+!s100 QC1H1lHHOAAbCgF@U85GR1
+IgYbJKzU:]_b0E?6NjHacL0
+R2
+R0
+R3
+R4
+R5
+L0 499
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@d@d_altpriority_encoder_vh8
+vbpnetwork
+R1
+!i10b 1
+!s100 <DhSQW[efk3WVi`5a>ZSM0
+IdMfBzNQ=C^e3WNl1`]lzK0
+R2
+R0
+w1637379443
+8D:/IntelFPGA/BPNetwork/src/bpnetwork.v
+FD:/IntelFPGA/BPNetwork/src/bpnetwork.v
+L0 2
+R6
+r1
+!s85 0
+31
+Z13 !s108 1637381448.000000
+!s107 D:/IntelFPGA/BPNetwork/src/bpnetwork.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/src|D:/IntelFPGA/BPNetwork/src/bpnetwork.v|
+!i113 1
+R10
+Z14 !s92 -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/src
+R12
+vbpparams
+R1
+!i10b 1
+!s100 CCOcmSQEg5ZZW<Ddbn1^C0
+I``kRm1@QI0nTg=51U5oAJ1
+R2
+R0
+w1635243359
+8D:/IntelFPGA/BPNetwork/ip_core/bpparams.v
+FD:/IntelFPGA/BPNetwork/ip_core/bpparams.v
+Z15 L0 39
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/IntelFPGA/BPNetwork/ip_core/bpparams.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/ip_core|D:/IntelFPGA/BPNetwork/ip_core/bpparams.v|
+!i113 1
+R10
+Z16 !s92 -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/ip_core
+R12
+vlay1_mod
+Z17 !s110 1637381448
+!i10b 1
+!s100 Fim9_^eYKCeS[1Kf2I?n[3
+ILVIG=MoPIJU]Ukkjb@[6l2
+R2
+R0
+w1636941419
+8D:/IntelFPGA/BPNetwork/src/lay1_mod.v
+FD:/IntelFPGA/BPNetwork/src/lay1_mod.v
+L0 3
+R6
+r1
+!s85 0
+31
+R13
+!s107 D:/IntelFPGA/BPNetwork/src/lay1_mod.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/src|D:/IntelFPGA/BPNetwork/src/lay1_mod.v|
+!i113 1
+R10
+R14
+R12
+vlay2_mod
+R17
+!i10b 1
+!s100 2Y5EGeP[GYYVQKFD>CcdR2
+I26_@Ho>JDd_553_l9gc^H0
+R2
+R0
+w1636941811
+8D:/IntelFPGA/BPNetwork/src/lay2_mod.v
+FD:/IntelFPGA/BPNetwork/src/lay2_mod.v
+L0 3
+R6
+r1
+!s85 0
+31
+R13
+!s107 D:/IntelFPGA/BPNetwork/src/lay2_mod.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/src|D:/IntelFPGA/BPNetwork/src/lay2_mod.v|
+!i113 1
+R10
+R14
+R12
+vMULT
+R1
+!i10b 1
+!s100 O02CgPKJQX@IQ=3c:KRn@0
+IHYUU6adkeQTNFj>_JNDg=1
+R2
+R0
+R3
+Z18 8D:/IntelFPGA/BPNetwork/db/MULT.v
+Z19 FD:/IntelFPGA/BPNetwork/db/MULT.v
+L0 510
+R6
+r1
+!s85 0
+31
+R7
+Z20 !s107 D:/IntelFPGA/BPNetwork/db/MULT.v|
+Z21 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/db|D:/IntelFPGA/BPNetwork/db/MULT.v|
+!i113 1
+R10
+R11
+R12
+n@m@u@l@t
+vMULT_altfp_mult_trn
+R1
+!i10b 1
+!s100 9Fm_^A@4GElVIDS9fJGk=1
+Ilda`NMf7?d3bJQX=AgFZi3
+R2
+R0
+R3
+R18
+R19
+L0 46
+R6
+r1
+!s85 0
+31
+R7
+R20
+R21
+!i113 1
+R10
+R11
+R12
+n@m@u@l@t_altfp_mult_trn
+vmult_ncs
+R1
+!i10b 1
+!s100 HdiMj>DIm<:VA79_fgN]T0
+IIKlIjZEC7V_EFVDZQon^^2
+R2
+R0
+w1636539144
+8D:/IntelFPGA/BPNetwork/db/mult_ncs.v
+FD:/IntelFPGA/BPNetwork/db/mult_ncs.v
+L0 28
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/IntelFPGA/BPNetwork/db/mult_ncs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/db|D:/IntelFPGA/BPNetwork/db/mult_ncs.v|
+!i113 1
+R10
+R11
+R12
+vseg_display
+R1
+!i10b 1
+!s100 1aN:kXX9m5;GMc95=zIQn1
+IlHZ4G5H11TdbcWAj5:9Zb3
+R2
+R0
+w1637379206
+8D:/IntelFPGA/BPNetwork/src/seg_display.v
+FD:/IntelFPGA/BPNetwork/src/seg_display.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/IntelFPGA/BPNetwork/src/seg_display.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/src|D:/IntelFPGA/BPNetwork/src/seg_display.v|
+!i113 1
+R10
+R14
+R12
+vsigmoid_lut
+R1
+!i10b 1
+!s100 1U55lb4An7hIA<;_OO^Y42
+IJUd<VeNAKNm7]O_78ZFn;3
+R2
+R0
+w1635766002
+8D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v
+FD:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v
+R15
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/ip_core|D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v|
+!i113 1
+R10
+R16
+R12
+vtop
+R1
+!i10b 1
+!s100 1C^6GcP:POCDD<HWEIjUc0
+Ic>YGf?IGBeS6QnZ7XFLY61
+R2
+R0
+w1637379205
+8D:/IntelFPGA/BPNetwork/src/top.v
+FD:/IntelFPGA/BPNetwork/src/top.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/IntelFPGA/BPNetwork/src/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/src|D:/IntelFPGA/BPNetwork/src/top.v|
+!i113 1
+R10
+R14
+R12
+vtop_tb
+!s110 1637381450
+!i10b 1
+!s100 bX60C?cBm1AbPBTkgPZGJ3
+IXaRMC4lNo7NC;K]STc`eS3
+R2
+R0
+w1637381426
+8D:/IntelFPGA/BPNetwork/sim/top_tb.v
+FD:/IntelFPGA/BPNetwork/sim/top_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/IntelFPGA/BPNetwork/sim/top_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/IntelFPGA/BPNetwork/sim|D:/IntelFPGA/BPNetwork/sim/top_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/sim
+R12

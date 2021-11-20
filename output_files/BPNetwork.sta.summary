@@ -1,0 +1,197 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -8.438
+TNS   : -5148.448
+
+Type  : Slow 1100mV 85C Model Setup 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : -4.865
+TNS   : -42.801
+
+Type  : Slow 1100mV 85C Model Setup 'rst_n'
+Slack : -4.603
+TNS   : -74.407
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : -0.052
+TNS   : -0.099
+
+Type  : Slow 1100mV 85C Model Hold 'rst_n'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 3.069
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'clk'
+Slack : -4.757
+TNS   : -2447.220
+
+Type  : Slow 1100mV 85C Model Removal 'clk'
+Slack : 1.497
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -2.225
+TNS   : -2087.015
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'rst_n'
+Slack : -0.192
+TNS   : -7.654
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'key'
+Slack : -0.174
+TNS   : -2.638
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -8.631
+TNS   : -5060.353
+
+Type  : Slow 1100mV 0C Model Setup 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : -4.977
+TNS   : -43.752
+
+Type  : Slow 1100mV 0C Model Setup 'rst_n'
+Slack : -4.599
+TNS   : -77.004
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : -0.186
+TNS   : -0.306
+
+Type  : Slow 1100mV 0C Model Hold 'rst_n'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 3.140
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'clk'
+Slack : -4.586
+TNS   : -2360.919
+
+Type  : Slow 1100mV 0C Model Removal 'clk'
+Slack : 1.440
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -2.225
+TNS   : -1975.984
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'rst_n'
+Slack : -0.188
+TNS   : -7.821
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'key'
+Slack : -0.167
+TNS   : -1.948
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -4.259
+TNS   : -2463.918
+
+Type  : Fast 1100mV 85C Model Setup 'rst_n'
+Slack : -2.534
+TNS   : -30.959
+
+Type  : Fast 1100mV 85C Model Setup 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : -2.341
+TNS   : -20.045
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -0.170
+TNS   : -0.276
+
+Type  : Fast 1100mV 85C Model Hold 'rst_n'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 1.773
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'clk'
+Slack : -2.995
+TNS   : -1543.782
+
+Type  : Fast 1100mV 85C Model Removal 'clk'
+Slack : 0.792
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -2.174
+TNS   : -1646.507
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'key'
+Slack : -0.447
+TNS   : -8.900
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'rst_n'
+Slack : -0.432
+TNS   : -25.195
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -3.915
+TNS   : -2132.072
+
+Type  : Fast 1100mV 0C Model Setup 'rst_n'
+Slack : -2.244
+TNS   : -27.671
+
+Type  : Fast 1100mV 0C Model Setup 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : -2.242
+TNS   : -19.303
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.205
+TNS   : -0.474
+
+Type  : Fast 1100mV 0C Model Hold 'rst_n'
+Slack : 0.124
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 1.753
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'clk'
+Slack : -2.958
+TNS   : -1524.717
+
+Type  : Fast 1100mV 0C Model Removal 'clk'
+Slack : 0.742
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -2.174
+TNS   : -1818.974
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'rst_n'
+Slack : -0.457
+TNS   : -26.793
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'key'
+Slack : -0.449
+TNS   : -8.941
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|valid'
+Slack : 0.398
+TNS   : 0.000
+
+------------------------------------------------------------

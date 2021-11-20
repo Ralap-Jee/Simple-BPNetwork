@@ -1,0 +1,216 @@
+# Reading D:/IntelFPGA/modelsim/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do BPNetwork_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/IntelFPGA/modelsim/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/src {D:/IntelFPGA/BPNetwork/src/lay1_mod.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:48 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/src" D:/IntelFPGA/BPNetwork/src/lay1_mod.v 
+# -- Compiling module lay1_mod
+# 
+# Top level modules:
+# 	lay1_mod
+# End time: 12:10:48 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/src {D:/IntelFPGA/BPNetwork/src/lay2_mod.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:48 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/src" D:/IntelFPGA/BPNetwork/src/lay2_mod.v 
+# -- Compiling module lay2_mod
+# 
+# Top level modules:
+# 	lay2_mod
+# End time: 12:10:48 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/src {D:/IntelFPGA/BPNetwork/src/bpnetwork.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:48 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/src" D:/IntelFPGA/BPNetwork/src/bpnetwork.v 
+# -- Compiling module bpnetwork
+# 
+# Top level modules:
+# 	bpnetwork
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/ip_core {D:/IntelFPGA/BPNetwork/ip_core/bpparams.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/ip_core" D:/IntelFPGA/BPNetwork/ip_core/bpparams.v 
+# -- Compiling module bpparams
+# 
+# Top level modules:
+# 	bpparams
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/ip_core {D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/ip_core" D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v 
+# -- Compiling module sigmoid_lut
+# 
+# Top level modules:
+# 	sigmoid_lut
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/db {D:/IntelFPGA/BPNetwork/db/ADD.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/db" D:/IntelFPGA/BPNetwork/db/ADD.v 
+# -- Compiling module ADD_altbarrel_shift_ltd
+# -- Compiling module ADD_altbarrel_shift_aeb
+# -- Compiling module ADD_altpriority_encoder_3e8
+# -- Compiling module ADD_altpriority_encoder_6e8
+# -- Compiling module ADD_altpriority_encoder_be8
+# -- Compiling module ADD_altpriority_encoder_3v7
+# -- Compiling module ADD_altpriority_encoder_6v7
+# -- Compiling module ADD_altpriority_encoder_bv7
+# -- Compiling module ADD_altpriority_encoder_r08
+# -- Compiling module ADD_altpriority_encoder_rf8
+# -- Compiling module ADD_altpriority_encoder_qb6
+# -- Compiling module ADD_altpriority_encoder_nh8
+# -- Compiling module ADD_altpriority_encoder_qh8
+# -- Compiling module ADD_altpriority_encoder_vh8
+# -- Compiling module ADD_altpriority_encoder_fj8
+# -- Compiling module ADD_altpriority_encoder_n28
+# -- Compiling module ADD_altpriority_encoder_q28
+# -- Compiling module ADD_altpriority_encoder_v28
+# -- Compiling module ADD_altpriority_encoder_f48
+# -- Compiling module ADD_altpriority_encoder_e48
+# -- Compiling module ADD_altfp_add_sub_55j
+# -- Compiling module ADD
+# 
+# Top level modules:
+# 	ADD
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/db {D:/IntelFPGA/BPNetwork/db/MULT.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/db" D:/IntelFPGA/BPNetwork/db/MULT.v 
+# -- Compiling module MULT_altfp_mult_trn
+# -- Compiling module MULT
+# 
+# Top level modules:
+# 	MULT
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/src {D:/IntelFPGA/BPNetwork/src/top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/src" D:/IntelFPGA/BPNetwork/src/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/src {D:/IntelFPGA/BPNetwork/src/seg_display.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/src" D:/IntelFPGA/BPNetwork/src/seg_display.v 
+# -- Compiling module seg_display
+# 
+# Top level modules:
+# 	seg_display
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/db {D:/IntelFPGA/BPNetwork/db/mult_ncs.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/db" D:/IntelFPGA/BPNetwork/db/mult_ncs.v 
+# -- Compiling module mult_ncs
+# 
+# Top level modules:
+# 	mult_ncs
+# End time: 12:10:49 on Nov 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/IntelFPGA/BPNetwork/sim {D:/IntelFPGA/BPNetwork/sim/top_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:49 on Nov 20,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/IntelFPGA/BPNetwork/sim" D:/IntelFPGA/BPNetwork/sim/top_tb.v 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 12:10:50 on Nov 20,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" top_tb 
+# Start time: 12:10:50 on Nov 20,2021
+# Loading work.top_tb
+# Loading work.top
+# Loading work.seg_display
+# Loading work.bpnetwork
+# Loading work.lay1_mod
+# Loading work.ADD
+# Loading work.ADD_altfp_add_sub_55j
+# Loading work.ADD_altbarrel_shift_ltd
+# Loading work.ADD_altbarrel_shift_aeb
+# Loading work.ADD_altpriority_encoder_qb6
+# Loading work.ADD_altpriority_encoder_r08
+# Loading work.ADD_altpriority_encoder_be8
+# Loading work.ADD_altpriority_encoder_6e8
+# Loading work.ADD_altpriority_encoder_3e8
+# Loading work.ADD_altpriority_encoder_bv7
+# Loading work.ADD_altpriority_encoder_6v7
+# Loading work.ADD_altpriority_encoder_3v7
+# Loading work.ADD_altpriority_encoder_rf8
+# Loading work.ADD_altpriority_encoder_e48
+# Loading work.ADD_altpriority_encoder_fj8
+# Loading work.ADD_altpriority_encoder_vh8
+# Loading work.ADD_altpriority_encoder_qh8
+# Loading work.ADD_altpriority_encoder_nh8
+# Loading work.ADD_altpriority_encoder_f48
+# Loading work.ADD_altpriority_encoder_v28
+# Loading work.ADD_altpriority_encoder_q28
+# Loading work.ADD_altpriority_encoder_n28
+# Loading lpm_ver.lpm_add_sub
+# Loading lpm_ver.lpm_compare
+# Loading work.MULT
+# Loading work.MULT_altfp_mult_trn
+# Loading lpm_ver.lpm_mult
+# Loading lpm_ver.LPM_HINT_EVALUATION
+# Loading work.sigmoid_lut
+# Loading altera_mf_ver.altsyncram
+# Loading work.lay2_mod
+# Loading work.bpparams
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Error: (vsim-3063) D:/IntelFPGA/BPNetwork/sim/top_tb.v(33): Port 'led' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u File: D:/IntelFPGA/BPNetwork/src/top.v
+# ** Warning: (vsim-3016) D:/IntelFPGA/BPNetwork/src/lay1_mod.v(342): Port type is incompatible with connection (port 'clock').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/lay1_mod_u/lut_1 File: D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v
+# ** Warning: (vsim-3016) D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v(58): Port type is incompatible with connection (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/lay1_mod_u/lut_1/altsyncram_component File: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3016) /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(47804): Port type is incompatible with connection (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/lay1_mod_u/lut_1/altsyncram_component/m_default/altsyncram_inst File: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3016) D:/IntelFPGA/BPNetwork/src/lay2_mod.v(244): Port type is incompatible with connection (port 'clock').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/lay2_mod_u/lut_2 File: D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v
+# ** Warning: (vsim-3016) D:/IntelFPGA/BPNetwork/ip_core/sigmoid_lut.v(58): Port type is incompatible with connection (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/lay2_mod_u/lut_2/altsyncram_component File: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3016) /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(47804): Port type is incompatible with connection (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/lay2_mod_u/lut_2/altsyncram_component/m_default/altsyncram_inst File: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3016) D:/IntelFPGA/BPNetwork/src/bpnetwork.v(89): Port type is incompatible with connection (port 'clock').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/bpparams_u File: D:/IntelFPGA/BPNetwork/ip_core/bpparams.v
+# ** Warning: (vsim-3016) D:/IntelFPGA/BPNetwork/ip_core/bpparams.v(66): Port type is incompatible with connection (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/bpparams_u/altsyncram_component File: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3016) /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(47804): Port type is incompatible with connection (port 'clock0').
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top_u/bpnetwork_u/bpparams_u/altsyncram_component/m_default/altsyncram_inst File: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./BPNetwork_run_msim_rtl_verilog.do PAUSED at line 21
+# End time: 12:11:19 on Nov 20,2021, Elapsed time: 0:00:29
+# Errors: 1, Warnings: 9

@@ -1,0 +1,31 @@
+
+State Machine - |top|bpnetwork:bpnetwork_u|lay2_mod:lay2_mod_u|state
+Name state.S8 state.S7 state.S6 state.S5 state.S4 state.S3 state.S2 state.S1 state.S0 state.Sidle 
+state.Sidle 0 0 0 0 0 0 0 0 0 0 
+state.S0 0 0 0 0 0 0 0 0 1 1 
+state.S1 0 0 0 0 0 0 0 1 0 1 
+state.S2 0 0 0 0 0 0 1 0 0 1 
+state.S3 0 0 0 0 0 1 0 0 0 1 
+state.S4 0 0 0 0 1 0 0 0 0 1 
+state.S5 0 0 0 1 0 0 0 0 0 1 
+state.S6 0 0 1 0 0 0 0 0 0 1 
+state.S7 0 1 0 0 0 0 0 0 0 1 
+state.S8 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|bpnetwork:bpnetwork_u|lay1_mod:lay1_mod_u|sigmoid_state
+Name sigmoid_state.sigmoid_S1 sigmoid_state.sigmoid_S0 sigmoid_state.sigmoid_Sidle sigmoid_state.0000 
+sigmoid_state.0000 0 0 0 0 
+sigmoid_state.sigmoid_Sidle 0 0 1 1 
+sigmoid_state.sigmoid_S0 0 1 0 1 
+sigmoid_state.sigmoid_S1 1 0 0 1 
+
+State Machine - |top|bpnetwork:bpnetwork_u|lay1_mod:lay1_mod_u|state
+Name state.S6 state.S5 state.S4 state.S3 state.S2 state.S1 state.S0 state.Sidle 
+state.Sidle 0 0 0 0 0 0 0 0 
+state.S0 0 0 0 0 0 0 1 1 
+state.S1 0 0 0 0 0 1 0 1 
+state.S2 0 0 0 0 1 0 0 1 
+state.S3 0 0 0 1 0 0 0 1 
+state.S4 0 0 1 0 0 0 0 1 
+state.S5 0 1 0 0 0 0 0 1 
+state.S6 1 0 0 0 0 0 0 1 

@@ -1,0 +1,13 @@
+
+
+D:/IntelFPGA/BPNetwork/ip_core/ALTFP_ADD_SUB.v
+
+Oct 18 10AM:01:21>: Variation file name (ALTFP_ADD_SUB) is identical with the name of one of its sub-components.
+
+MegaWizard Plug-In Manager will rename the variation to "ALTFP_ADD_SUa" to prevent compilation errors
+
+D:/IntelFPGA/BPNetwork/ip_core/ALTFP_MULT.v
+
+Oct 18 10AM:06:52>: Variation file name (ALTFP_MULT) is identical with the name of one of its sub-components.
+
+MegaWizard Plug-In Manager will rename the variation to "ALTFP_MULa" to prevent compilation errors

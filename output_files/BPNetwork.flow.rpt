@@ -1,0 +1,174 @@
+Flow report for BPNetwork
+Sat Nov 20 12:13:28 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Sat Nov 20 12:13:28 2021       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; BPNetwork                                   ;
+; Top-level Entity Name           ; top                                         ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 1,231 / 32,070 ( 4 % )                      ;
+; Total registers                 ; 1805                                        ;
+; Total pins                      ; 19 / 457 ( 4 % )                            ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 7,424 / 4,065,280 ( < 1 % )                 ;
+; Total DSP Blocks                ; 2 / 87 ( 2 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/20/2021 12:11:29 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; BPNetwork           ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                            ;
++--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 93180995897846.163738148810840                        ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                    ; --            ; --          ; bpnetwork_tb   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                    ; --            ; --          ; top_tb         ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; top_tb                                                ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                           ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_RUN_SCRIPT            ; simulation/modelsim/BPNetwork_run_msim_rtl_verilog.do ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                             ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; sim/bpnetwork_tb.v                                    ; --            ; --          ; bpnetwork_tb   ;
+; EDA_TEST_BENCH_FILE                  ; sim/top_tb.v                                          ; --            ; --          ; top_tb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; bpnetwork_tb                                          ; --            ; --          ; bpnetwork_tb   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; top_tb                                                ; --            ; --          ; top_tb         ;
+; EDA_TEST_BENCH_NAME                  ; bpnetwork_tb                                          ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; top_tb                                                ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 ms                                                  ; --            ; --          ; bpnetwork_tb   ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 ms                                                  ; --            ; --          ; top_tb         ;
+; EDA_TIME_SCALE                       ; 1 ps                                                  ; --            ; --          ; eda_simulation ;
+; ENABLE_SIGNALTAP                     ; On                                                    ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/bpparams.bsf                                  ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/bpparams_inst.v                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/bpparams_bb.v                                 ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/bpparams.inc                                  ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/bpparams.cmp                                  ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/bpparams_syn.v                                ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/sigmoid_lut.bsf                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/sigmoid_lut_inst.v                            ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/sigmoid_lut_bb.v                              ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/sigmoid_lut.inc                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/sigmoid_lut.cmp                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/sigmoid_lut_syn.v                             ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/ADD_inst.v                                    ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/ADD_bb.v                                      ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/ADD_syn.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/MULT.bsf                                      ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/MULT_inst.v                                   ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/MULT_bb.v                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/MULT.inc                                      ; --            ; --          ; --             ;
+; MISC_FILE                            ; ip_core/MULT.cmp                                      ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                            ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                ; --            ; top         ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                ; --            ; top         ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                ; --            ; top         ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                          ; --            ; --          ; --             ;
+; SLD_FILE                             ; db/stp1_auto_stripped.stp                             ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; top                                                   ; BPNetwork     ; --          ; --             ;
+; USE_SIGNALTAP_FILE                   ; stp1.stp                                              ; --            ; --          ; --             ;
++--------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 4909 MB             ; 00:00:30                           ;
+; Fitter                    ; 00:01:14     ; 1.1                     ; 6692 MB             ; 00:02:48                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 4841 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.9                     ; 5198 MB             ; 00:00:14                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4781 MB             ; 00:00:03                           ;
+; Total                     ; 00:01:53     ; --                      ; --                  ; 00:03:44                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-Ral      ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-Ral      ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-Ral      ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-Ral      ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-Ral      ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off BPNetwork -c BPNetwork
+quartus_fit --read_settings_files=off --write_settings_files=off BPNetwork -c BPNetwork
+quartus_asm --read_settings_files=off --write_settings_files=off BPNetwork -c BPNetwork
+quartus_sta BPNetwork -c BPNetwork
+quartus_eda --read_settings_files=off --write_settings_files=off BPNetwork -c BPNetwork
+
+
+

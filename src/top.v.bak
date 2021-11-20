@@ -1,0 +1,29 @@
+// top
+module top(
+
+	input				clk,
+	input				rst_n,
+	input		[8:0] sw,
+	input				key,
+	
+	output			finish,
+	output	[31:0]result
+
+);
+
+
+
+
+
+
+bpnetwork bpnetwork_u(
+	.clk		(clk),
+	.rst_n	(rst_n),
+	.sw		(sw),
+	.en		(key),
+	.finish	(),
+	.result	()
+);
+
+
+endmodule

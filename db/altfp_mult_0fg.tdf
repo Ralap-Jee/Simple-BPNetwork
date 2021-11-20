@@ -1,0 +1,279 @@
+--altfp_mult CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone IV E" aclr clock dataa datab result CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DSP_BLOCK_BALANCING="Auto"
+--VERSION_BEGIN 17.1 cbx_alt_ded_mult_y 2017:10:25:18:06:52:SJ cbx_altbarrel_shift 2017:10:25:18:06:52:SJ cbx_altera_mult_add 2017:10:25:18:06:52:SJ cbx_altera_mult_add_rtl 2017:10:25:18:06:52:SJ cbx_altfp_mult 2017:10:25:18:06:52:SJ cbx_altmult_add 2017:10:25:18:06:52:SJ cbx_cycloneii 2017:10:25:18:06:53:SJ cbx_lpm_add_sub 2017:10:25:18:06:53:SJ cbx_lpm_compare 2017:10:25:18:06:53:SJ cbx_lpm_mult 2017:10:25:18:06:53:SJ cbx_mgl 2017:10:25:18:08:29:SJ cbx_nadder 2017:10:25:18:06:53:SJ cbx_padd 2017:10:25:18:06:53:SJ cbx_parallel_add 2017:10:25:18:06:53:SJ cbx_stratix 2017:10:25:18:06:53:SJ cbx_stratixii 2017:10:25:18:06:53:SJ cbx_util_mgl 2017:10:25:18:06:53:SJ  VERSION_END
+
+
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details.
+
+
+FUNCTION mult_kjt (aclr, clken, clock, dataa[23..0], datab[23..0])
+RETURNS ( result[47..0]);
+
+--synthesis_resources = dsp_9bit 7 lut 111 reg 209 
+SUBDESIGN altfp_mult_0fg
+( 
+	aclr	:	input;
+	clock	:	input;
+	dataa[31..0]	:	input;
+	datab[31..0]	:	input;
+	result[31..0]	:	output;
+) 
+VARIABLE 
+	dataa_exp_all_one_ff_p1 : dffe;
+	dataa_exp_not_zero_ff_p1 : dffe;
+	dataa_man_not_zero_ff_p1 : dffe;
+	dataa_man_not_zero_ff_p2 : dffe;
+	datab_exp_all_one_ff_p1 : dffe;
+	datab_exp_not_zero_ff_p1 : dffe;
+	datab_man_not_zero_ff_p1 : dffe;
+	datab_man_not_zero_ff_p2 : dffe;
+	delay_exp2_bias[9..0] : dffe;
+	delay_exp_bias[9..0] : dffe;
+	delay_man_product_msb : dffe;
+	delay_man_product_msb_p0 : dffe;
+	exp_add_p1a[8..0] : dffe;
+	exp_result_ff[7..0] : dffe;
+	input_is_infinity_dffe_0 : dffe;
+	input_is_infinity_dffe_1 : dffe;
+	input_is_infinity_ff1 : dffe;
+	input_is_nan_dffe_0 : dffe;
+	input_is_nan_dffe_1 : dffe;
+	input_is_nan_ff1 : dffe;
+	input_not_zero_dffe_0 : dffe;
+	input_not_zero_dffe_1 : dffe;
+	input_not_zero_ff1 : dffe;
+	lsb_dffe : dffe;
+	man_result_ff[22..0] : dffe;
+	man_round_p[23..0] : dffe;
+	man_round_p2a[24..0] : dffe;
+	round_dffe : dffe;
+	sign_node_ff[4..0] : dffe;
+	sticky_dffe : dffe;
+	exp_add_adder_pipeline_dffe[8..0]	:	DFFE
+		WITH (
+			power_up ="low"
+		);
+	exp_add_adder_result_int[9..0]	:	WIRE;
+	exp_add_adder_aclr	:	WIRE;
+	exp_add_adder_cin	:	WIRE;
+	exp_add_adder_clken	:	WIRE;
+	exp_add_adder_clock	:	WIRE;
+	exp_add_adder_dataa[8..0]	:	WIRE;
+	exp_add_adder_datab[8..0]	:	WIRE;
+	exp_add_adder_result[8..0]	:	WIRE;
+	exp_adj_adder_result_int[10..0]	:	WIRE;
+	exp_adj_adder_cin	:	WIRE;
+	exp_adj_adder_dataa[9..0]	:	WIRE;
+	exp_adj_adder_datab[9..0]	:	WIRE;
+	exp_adj_adder_result[9..0]	:	WIRE;
+	exp_bias_subtr_dataa[9..0]	:	WIRE;
+	exp_bias_subtr_datab[9..0]	:	WIRE;
+	exp_bias_subtr_result[9..0]	:	WIRE;
+	man_round_adder_dataa[24..0]	:	WIRE;
+	man_round_adder_datab[24..0]	:	WIRE;
+	man_round_adder_result[24..0]	:	WIRE;
+	man_product2_mult : mult_kjt;
+	bias[9..0]	: WIRE;
+	clk_en	: NODE;
+	dataa_exp_all_one[7..0]	: WIRE;
+	dataa_exp_not_zero[7..0]	: WIRE;
+	dataa_man_not_zero[22..0]	: WIRE;
+	datab_exp_all_one[7..0]	: WIRE;
+	datab_exp_not_zero[7..0]	: WIRE;
+	datab_man_not_zero[22..0]	: WIRE;
+	exp_is_inf	: WIRE;
+	exp_is_zero	: WIRE;
+	expmod[9..0]	: WIRE;
+	inf_num[7..0]	: WIRE;
+	lsb_bit	: WIRE;
+	man_result_round[23..0]	: WIRE;
+	man_shift_full[24..0]	: WIRE;
+	result_exp_all_one[7..0]	: WIRE;
+	result_exp_not_zero[8..0]	: WIRE;
+	round_bit	: WIRE;
+	round_carry	: WIRE;
+	sticky_bit[22..0]	: WIRE;
+
+BEGIN 
+	dataa_exp_all_one_ff_p1.clk = clock;
+	dataa_exp_all_one_ff_p1.clrn = (! aclr);
+	dataa_exp_all_one_ff_p1.d = dataa_exp_all_one[7..7];
+	dataa_exp_all_one_ff_p1.ena = clk_en;
+	dataa_exp_not_zero_ff_p1.clk = clock;
+	dataa_exp_not_zero_ff_p1.clrn = (! aclr);
+	dataa_exp_not_zero_ff_p1.d = dataa_exp_not_zero[7..7];
+	dataa_exp_not_zero_ff_p1.ena = clk_en;
+	dataa_man_not_zero_ff_p1.clk = clock;
+	dataa_man_not_zero_ff_p1.clrn = (! aclr);
+	dataa_man_not_zero_ff_p1.d = dataa_man_not_zero[10..10];
+	dataa_man_not_zero_ff_p1.ena = clk_en;
+	dataa_man_not_zero_ff_p2.clk = clock;
+	dataa_man_not_zero_ff_p2.clrn = (! aclr);
+	dataa_man_not_zero_ff_p2.d = dataa_man_not_zero[22..22];
+	dataa_man_not_zero_ff_p2.ena = clk_en;
+	datab_exp_all_one_ff_p1.clk = clock;
+	datab_exp_all_one_ff_p1.clrn = (! aclr);
+	datab_exp_all_one_ff_p1.d = datab_exp_all_one[7..7];
+	datab_exp_all_one_ff_p1.ena = clk_en;
+	datab_exp_not_zero_ff_p1.clk = clock;
+	datab_exp_not_zero_ff_p1.clrn = (! aclr);
+	datab_exp_not_zero_ff_p1.d = datab_exp_not_zero[7..7];
+	datab_exp_not_zero_ff_p1.ena = clk_en;
+	datab_man_not_zero_ff_p1.clk = clock;
+	datab_man_not_zero_ff_p1.clrn = (! aclr);
+	datab_man_not_zero_ff_p1.d = datab_man_not_zero[10..10];
+	datab_man_not_zero_ff_p1.ena = clk_en;
+	datab_man_not_zero_ff_p2.clk = clock;
+	datab_man_not_zero_ff_p2.clrn = (! aclr);
+	datab_man_not_zero_ff_p2.d = datab_man_not_zero[22..22];
+	datab_man_not_zero_ff_p2.ena = clk_en;
+	delay_exp2_bias[].clk = clock;
+	delay_exp2_bias[].clrn = (! aclr);
+	delay_exp2_bias[].d = delay_exp_bias[].q;
+	delay_exp2_bias[].ena = clk_en;
+	delay_exp_bias[].clk = clock;
+	delay_exp_bias[].clrn = (! aclr);
+	delay_exp_bias[].d = exp_bias_subtr_result[];
+	delay_exp_bias[].ena = clk_en;
+	delay_man_product_msb.clk = clock;
+	delay_man_product_msb.clrn = (! aclr);
+	delay_man_product_msb.d = delay_man_product_msb_p0.q;
+	delay_man_product_msb.ena = clk_en;
+	delay_man_product_msb_p0.clk = clock;
+	delay_man_product_msb_p0.clrn = (! aclr);
+	delay_man_product_msb_p0.d = man_product2_mult.result[47..47];
+	delay_man_product_msb_p0.ena = clk_en;
+	exp_add_p1a[].clk = clock;
+	exp_add_p1a[].clrn = (! aclr);
+	exp_add_p1a[].d = exp_add_adder_result[];
+	exp_add_p1a[].ena = clk_en;
+	exp_result_ff[].clk = clock;
+	exp_result_ff[].clrn = (! aclr);
+	exp_result_ff[].d = ((inf_num[] & ((exp_is_inf # input_is_infinity_ff1.q) # input_is_nan_ff1.q)) # ((exp_adj_adder_result[7..0] & (! exp_is_zero)) & input_not_zero_ff1.q));
+	exp_result_ff[].ena = clk_en;
+	input_is_infinity_dffe_0.clk = clock;
+	input_is_infinity_dffe_0.clrn = (! aclr);
+	input_is_infinity_dffe_0.d = ((dataa_exp_all_one_ff_p1.q & (! (dataa_man_not_zero_ff_p1.q # dataa_man_not_zero_ff_p2.q))) # (datab_exp_all_one_ff_p1.q & (! (datab_man_not_zero_ff_p1.q # datab_man_not_zero_ff_p2.q))));
+	input_is_infinity_dffe_0.ena = clk_en;
+	input_is_infinity_dffe_1.clk = clock;
+	input_is_infinity_dffe_1.clrn = (! aclr);
+	input_is_infinity_dffe_1.d = input_is_infinity_dffe_0.q;
+	input_is_infinity_dffe_1.ena = clk_en;
+	input_is_infinity_ff1.clk = clock;
+	input_is_infinity_ff1.clrn = (! aclr);
+	input_is_infinity_ff1.d = input_is_infinity_dffe_1.q;
+	input_is_infinity_ff1.ena = clk_en;
+	input_is_nan_dffe_0.clk = clock;
+	input_is_nan_dffe_0.clrn = (! aclr);
+	input_is_nan_dffe_0.d = ((dataa_exp_all_one_ff_p1.q & (dataa_man_not_zero_ff_p1.q # dataa_man_not_zero_ff_p2.q)) # (datab_exp_all_one_ff_p1.q & (datab_man_not_zero_ff_p1.q # datab_man_not_zero_ff_p2.q)));
+	input_is_nan_dffe_0.ena = clk_en;
+	input_is_nan_dffe_1.clk = clock;
+	input_is_nan_dffe_1.clrn = (! aclr);
+	input_is_nan_dffe_1.d = input_is_nan_dffe_0.q;
+	input_is_nan_dffe_1.ena = clk_en;
+	input_is_nan_ff1.clk = clock;
+	input_is_nan_ff1.clrn = (! aclr);
+	input_is_nan_ff1.d = input_is_nan_dffe_1.q;
+	input_is_nan_ff1.ena = clk_en;
+	input_not_zero_dffe_0.clk = clock;
+	input_not_zero_dffe_0.clrn = (! aclr);
+	input_not_zero_dffe_0.d = (dataa_exp_not_zero_ff_p1.q & datab_exp_not_zero_ff_p1.q);
+	input_not_zero_dffe_0.ena = clk_en;
+	input_not_zero_dffe_1.clk = clock;
+	input_not_zero_dffe_1.clrn = (! aclr);
+	input_not_zero_dffe_1.d = input_not_zero_dffe_0.q;
+	input_not_zero_dffe_1.ena = clk_en;
+	input_not_zero_ff1.clk = clock;
+	input_not_zero_ff1.clrn = (! aclr);
+	input_not_zero_ff1.d = input_not_zero_dffe_1.q;
+	input_not_zero_ff1.ena = clk_en;
+	lsb_dffe.clk = clock;
+	lsb_dffe.clrn = (! aclr);
+	lsb_dffe.d = lsb_bit;
+	lsb_dffe.ena = clk_en;
+	man_result_ff[].clk = clock;
+	man_result_ff[].clrn = (! aclr);
+	man_result_ff[].d = ( ((((((man_result_round[22..22] & input_not_zero_ff1.q) & (! input_is_infinity_ff1.q)) & (! exp_is_inf)) & (! exp_is_zero)) # (input_is_infinity_ff1.q & (! input_not_zero_ff1.q))) # input_is_nan_ff1.q), (((((man_result_round[21..0] & input_not_zero_ff1.q) & (! input_is_infinity_ff1.q)) & (! exp_is_inf)) & (! exp_is_zero)) & (! input_is_nan_ff1.q)));
+	man_result_ff[].ena = clk_en;
+	man_round_p[].clk = clock;
+	man_round_p[].clrn = (! aclr);
+	man_round_p[].d = man_shift_full[24..1];
+	man_round_p[].ena = clk_en;
+	man_round_p2a[].clk = clock;
+	man_round_p2a[].clrn = (! aclr);
+	man_round_p2a[].d = man_round_adder_result[];
+	man_round_p2a[].ena = clk_en;
+	round_dffe.clk = clock;
+	round_dffe.clrn = (! aclr);
+	round_dffe.d = round_bit;
+	round_dffe.ena = clk_en;
+	sign_node_ff[].clk = clock;
+	sign_node_ff[].clrn = (! aclr);
+	sign_node_ff[].d = ( sign_node_ff[3..0].q, (dataa[31..31] $ datab[31..31]));
+	sign_node_ff[].ena = clk_en;
+	sticky_dffe.clk = clock;
+	sticky_dffe.clrn = (! aclr);
+	sticky_dffe.d = sticky_bit[22..22];
+	sticky_dffe.ena = clk_en;
+	exp_add_adder_result_int[] = (exp_add_adder_dataa[], exp_add_adder_cin) + (exp_add_adder_datab[], exp_add_adder_cin);
+	exp_add_adder_pipeline_dffe[].clk = exp_add_adder_clock;
+	exp_add_adder_pipeline_dffe[].clrn = !exp_add_adder_aclr;
+	exp_add_adder_pipeline_dffe[].ena = exp_add_adder_clken;
+	exp_add_adder_result[] = exp_add_adder_pipeline_dffe[8..0].q;
+	exp_add_adder_pipeline_dffe[8..0].d = exp_add_adder_result_int[9..1];
+	exp_add_adder_aclr = aclr;
+	exp_add_adder_cin = B"0";
+	exp_add_adder_clken = clk_en;
+	exp_add_adder_clock = clock;
+	exp_add_adder_dataa[] = ( B"0", dataa[30..23]);
+	exp_add_adder_datab[] = ( B"0", datab[30..23]);
+	exp_adj_adder_result_int[] = (exp_adj_adder_dataa[], exp_adj_adder_cin) + (exp_adj_adder_datab[], exp_adj_adder_cin);
+	exp_adj_adder_result[] = exp_adj_adder_result_int[10..1];
+	exp_adj_adder_cin = B"0";
+	exp_adj_adder_dataa[] = delay_exp2_bias[].q;
+	exp_adj_adder_datab[] = expmod[];
+	exp_bias_subtr_result[] = exp_bias_subtr_dataa[] - exp_bias_subtr_datab[];
+	exp_bias_subtr_dataa[] = ( B"0", exp_add_p1a[8..0].q);
+	exp_bias_subtr_datab[] = ( bias[9..0]);
+	man_round_adder_result[] = man_round_adder_dataa[] + man_round_adder_datab[];
+	man_round_adder_dataa[] = ( B"0", man_round_p[].q);
+	man_round_adder_datab[] = ( B"000000000000000000000000", round_carry);
+	man_product2_mult.aclr = aclr;
+	man_product2_mult.clken = clk_en;
+	man_product2_mult.clock = clock;
+	man_product2_mult.dataa[] = ( B"1", dataa[22..0]);
+	man_product2_mult.datab[] = ( B"1", datab[22..0]);
+	bias[] = ( B"0", B"0", B"0", B"1", B"1", B"1", B"1", B"1", B"1", B"1");
+	clk_en = VCC;
+	dataa_exp_all_one[] = ( (dataa[30..30] & dataa_exp_all_one[6..6]), (dataa[29..29] & dataa_exp_all_one[5..5]), (dataa[28..28] & dataa_exp_all_one[4..4]), (dataa[27..27] & dataa_exp_all_one[3..3]), (dataa[26..26] & dataa_exp_all_one[2..2]), (dataa[25..25] & dataa_exp_all_one[1..1]), (dataa[24..24] & dataa_exp_all_one[0..0]), dataa[23..23]);
+	dataa_exp_not_zero[] = ( (dataa[30..30] # dataa_exp_not_zero[6..6]), (dataa[29..29] # dataa_exp_not_zero[5..5]), (dataa[28..28] # dataa_exp_not_zero[4..4]), (dataa[27..27] # dataa_exp_not_zero[3..3]), (dataa[26..26] # dataa_exp_not_zero[2..2]), (dataa[25..25] # dataa_exp_not_zero[1..1]), (dataa[24..24] # dataa_exp_not_zero[0..0]), dataa[23..23]);
+	dataa_man_not_zero[] = ( (dataa[22..22] # dataa_man_not_zero[21..21]), (dataa[21..21] # dataa_man_not_zero[20..20]), (dataa[20..20] # dataa_man_not_zero[19..19]), (dataa[19..19] # dataa_man_not_zero[18..18]), (dataa[18..18] # dataa_man_not_zero[17..17]), (dataa[17..17] # dataa_man_not_zero[16..16]), (dataa[16..16] # dataa_man_not_zero[15..15]), (dataa[15..15] # dataa_man_not_zero[14..14]), (dataa[14..14] # dataa_man_not_zero[13..13]), (dataa[13..13] # dataa_man_not_zero[12..12]), (dataa[12..12] # dataa_man_not_zero[11..11]), dataa[11..11], (dataa[10..10] # dataa_man_not_zero[9..9]), (dataa[9..9] # dataa_man_not_zero[8..8]), (dataa[8..8] # dataa_man_not_zero[7..7]), (dataa[7..7] # dataa_man_not_zero[6..6]), (dataa[6..6] # dataa_man_not_zero[5..5]), (dataa[5..5] # dataa_man_not_zero[4..4]), (dataa[4..4] # dataa_man_not_zero[3..3]), (dataa[3..3] # dataa_man_not_zero[2..2]), (dataa[2..2] # dataa_man_not_zero[1..1]), (dataa[1..1] # dataa_man_not_zero[0..0]), dataa[0..0]);
+	datab_exp_all_one[] = ( (datab[30..30] & datab_exp_all_one[6..6]), (datab[29..29] & datab_exp_all_one[5..5]), (datab[28..28] & datab_exp_all_one[4..4]), (datab[27..27] & datab_exp_all_one[3..3]), (datab[26..26] & datab_exp_all_one[2..2]), (datab[25..25] & datab_exp_all_one[1..1]), (datab[24..24] & datab_exp_all_one[0..0]), datab[23..23]);
+	datab_exp_not_zero[] = ( (datab[30..30] # datab_exp_not_zero[6..6]), (datab[29..29] # datab_exp_not_zero[5..5]), (datab[28..28] # datab_exp_not_zero[4..4]), (datab[27..27] # datab_exp_not_zero[3..3]), (datab[26..26] # datab_exp_not_zero[2..2]), (datab[25..25] # datab_exp_not_zero[1..1]), (datab[24..24] # datab_exp_not_zero[0..0]), datab[23..23]);
+	datab_man_not_zero[] = ( (datab[22..22] # datab_man_not_zero[21..21]), (datab[21..21] # datab_man_not_zero[20..20]), (datab[20..20] # datab_man_not_zero[19..19]), (datab[19..19] # datab_man_not_zero[18..18]), (datab[18..18] # datab_man_not_zero[17..17]), (datab[17..17] # datab_man_not_zero[16..16]), (datab[16..16] # datab_man_not_zero[15..15]), (datab[15..15] # datab_man_not_zero[14..14]), (datab[14..14] # datab_man_not_zero[13..13]), (datab[13..13] # datab_man_not_zero[12..12]), (datab[12..12] # datab_man_not_zero[11..11]), datab[11..11], (datab[10..10] # datab_man_not_zero[9..9]), (datab[9..9] # datab_man_not_zero[8..8]), (datab[8..8] # datab_man_not_zero[7..7]), (datab[7..7] # datab_man_not_zero[6..6]), (datab[6..6] # datab_man_not_zero[5..5]), (datab[5..5] # datab_man_not_zero[4..4]), (datab[4..4] # datab_man_not_zero[3..3]), (datab[3..3] # datab_man_not_zero[2..2]), (datab[2..2] # datab_man_not_zero[1..1]), (datab[1..1] # datab_man_not_zero[0..0]), datab[0..0]);
+	exp_is_inf = (((! exp_adj_adder_result[9..9]) & exp_adj_adder_result[8..8]) # ((! exp_adj_adder_result[8..8]) & result_exp_all_one[7..7]));
+	exp_is_zero = (exp_adj_adder_result[9..9] # (! result_exp_not_zero[8..8]));
+	expmod[] = ( B"00000000", (delay_man_product_msb.q & man_round_p2a[24..24].q), (delay_man_product_msb.q $ man_round_p2a[24..24].q));
+	inf_num[] = ( B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1");
+	lsb_bit = man_shift_full[1..1];
+	man_result_round[] = ((man_round_p2a[23..0].q & (! man_round_p2a[24..24].q)) # (man_round_p2a[24..1].q & man_round_p2a[24..24].q));
+	man_shift_full[] = ((man_product2_mult.result[46..22] & (! man_product2_mult.result[47..47])) # (man_product2_mult.result[47..23] & man_product2_mult.result[47..47]));
+	result[] = ( sign_node_ff[4].q, exp_result_ff[7..0].q, man_result_ff[22..0].q);
+	result_exp_all_one[] = ( (result_exp_all_one[6..6] & exp_adj_adder_result[7..7]), (result_exp_all_one[5..5] & exp_adj_adder_result[6..6]), (result_exp_all_one[4..4] & exp_adj_adder_result[5..5]), (result_exp_all_one[3..3] & exp_adj_adder_result[4..4]), (result_exp_all_one[2..2] & exp_adj_adder_result[3..3]), (result_exp_all_one[1..1] & exp_adj_adder_result[2..2]), (result_exp_all_one[0..0] & exp_adj_adder_result[1..1]), exp_adj_adder_result[0..0]);
+	result_exp_not_zero[] = ( (result_exp_not_zero[7..7] # exp_adj_adder_result[8..8]), (result_exp_not_zero[6..6] # exp_adj_adder_result[7..7]), (result_exp_not_zero[5..5] # exp_adj_adder_result[6..6]), (result_exp_not_zero[4..4] # exp_adj_adder_result[5..5]), (result_exp_not_zero[3..3] # exp_adj_adder_result[4..4]), (result_exp_not_zero[2..2] # exp_adj_adder_result[3..3]), (result_exp_not_zero[1..1] # exp_adj_adder_result[2..2]), (result_exp_not_zero[0..0] # exp_adj_adder_result[1..1]), exp_adj_adder_result[0..0]);
+	round_bit = man_shift_full[0..0];
+	round_carry = (round_dffe.q & (lsb_dffe.q # sticky_dffe.q));
+	sticky_bit[] = ( (sticky_bit[21..21] # (man_product2_mult.result[47..47] & man_product2_mult.result[22..22])), (sticky_bit[20..20] # man_product2_mult.result[21..21]), (sticky_bit[19..19] # man_product2_mult.result[20..20]), (sticky_bit[18..18] # man_product2_mult.result[19..19]), (sticky_bit[17..17] # man_product2_mult.result[18..18]), (sticky_bit[16..16] # man_product2_mult.result[17..17]), (sticky_bit[15..15] # man_product2_mult.result[16..16]), (sticky_bit[14..14] # man_product2_mult.result[15..15]), (sticky_bit[13..13] # man_product2_mult.result[14..14]), (sticky_bit[12..12] # man_product2_mult.result[13..13]), (sticky_bit[11..11] # man_product2_mult.result[12..12]), (sticky_bit[10..10] # man_product2_mult.result[11..11]), (sticky_bit[9..9] # man_product2_mult.result[10..10]), (sticky_bit[8..8] # man_product2_mult.result[9..9]), (sticky_bit[7..7] # man_product2_mult.result[8..8]), (sticky_bit[6..6] # man_product2_mult.result[7..7]), (sticky_bit[5..5] # man_product2_mult.result[6..6]), (sticky_bit[4..4] # man_product2_mult.result[5..5]), (sticky_bit[3..3] # man_product2_mult.result[4..4]), (sticky_bit[2..2] # man_product2_mult.result[3..3]), (sticky_bit[1..1] # man_product2_mult.result[2..2]), (sticky_bit[0..0] # man_product2_mult.result[1..1]), man_product2_mult.result[0..0]);
+END;
+--VALID FILE

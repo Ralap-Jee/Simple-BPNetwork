@@ -1,0 +1,30 @@
+// bpnetwork
+module (
+
+
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+rom rom_u(
+	.clock			(clk),
+	.address_a		(rom_addra),
+	.address_b		(rom_addrb),
+	.q_a				(rom_dataa),
+	.q_b				(rom_datab)
+);
+
+
+
+endmodule
