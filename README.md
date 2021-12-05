@@ -9,15 +9,15 @@ This is a Simple **BPNetwork** implementation in Verilog HDL.
 
 - We are using **ModelSim-Intel FPGA Edition**, which can be downloaded from the same place as above.
 
-- Terasic DE1-SoC kit is provided. All editions of MATLAB suported.
+- Terasic **DE1-SoC** kit is provided. All editions of **MATLAB** suported.
 
 # Files
 
-- You can find sources Verilog files in ~/src
+- You can find sources Verilog files in **~/src**
 
-- Testbench files in ~/sim
+- Testbench files in **~/sim**
 
-- MATLAB files in ~/MATLAB
+- MATLAB files in **~/MATLAB**
 
 
 
