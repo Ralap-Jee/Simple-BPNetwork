@@ -18,7 +18,7 @@ module lay2_mod (
 );
 
 parameter MULT_LATENCY = 4'd4,	//mult latency is 5, so it's set as 4 because of a reg delay
-			 ADD_LATENCY  = 4'd6;	//add latency is 7
+			 ADD_LATENCY  = 4'd4;	//add latency is 5
 
 // state code			 
 parameter Sidle=5'b00000,		//IDLE
@@ -225,11 +225,18 @@ end
 
 
 // Add module with 7 latency
-ADD add_2(
-	.clock			(clk),
-	.dataa			(add_dataa),
-	.datab			(add_datab),
-	.result			(add_result)
+//ADD add_2(
+//	.clock			(clk),
+//	.dataa			(add_dataa),
+//	.datab			(add_datab),
+//	.result			(add_result)
+//);
+u_add add_2(
+	.clk				(clk),
+	.rst_n			(rst_n),
+	.a					(add_dataa),
+	.b					(add_datab),
+	.q					(add_result)
 );
 
 // MULT module with 5 latency
